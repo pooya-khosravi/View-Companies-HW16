@@ -1,0 +1,58 @@
+<div class="createParent" style="display: none;">
+    <div class="onvan">
+        <div id="closeIcon"> <i class="fas fa-window-close hvr"></i> </div>
+        <div id="dialogMsg"> پر کردن فیلد های خالی الزامی مباشد </div>
+        <div id="flag"></div>
+    </div>
+    <div class="labels">
+        <div class="fields" onkeyup="checkValidation(this)">
+            <label for="firstName">نام :</label>
+            <input type="text" class="form-control hvr" id="firstName" placeholder="نام ">
+            <div class="feedback"> </div>
+        </div>
+        <div class="fields" onkeyup="checkValidation(this)">
+            <label for="lastName">نام خانوادگی :</label>
+            <input type="text" class="form-control hvr" id="lastName" placeholder="نام خانوادگی">
+            <div class="feedback"> </div>
+        </div>
+        <div class="fields" onkeyup="checkValidation(this)">
+            <label for="codeMelli">کد ملی :</label>
+            <input type="text" class="form-control hvr" id="codeMelli" placeholder="کد ملی">
+            <div class="feedback"> </div>
+        </div>
+        <div class="fields rButtons">
+            <label>جنیست :</label>
+            <div class="custom-control custom-radio">
+                <input checked value="آقا" type="radio" id="customRadio1" name="gender" class="custom-control-input">
+                <label class="custom-control-label hvr" for="customRadio1">آقا</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input value="خانم" type="radio" id="customRadio2" name="gender" class="custom-control-input">
+                <label class="custom-control-label hvr" for="customRadio2">خانم</label>
+            </div>
+        </div>
+        <div class="fields rButtons">
+            <label>وضعیت کارمند :</label>
+            <div class="custom-control custom-radio">
+                <input value="مدیر" checked type="radio" id="manager" name="isManager" class="custom-control-input">
+                <label class="custom-control-label hvr" for="manager">مدیر</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input value="عادی" type="radio" id="public" name="isManager" class="custom-control-input">
+                <label class="custom-control-label hvr" for="public">کاربر عادی</label>
+            </div>
+        </div>
+        <div class="fields">
+            <label for="tavallod">تارخ تولد :</label>
+            <div id="tavallodParent">
+                <div id="taghvimIcon"> <i class="fas fa-calendar-alt"></i> </div>
+                <input type="text" class="observer-example" id="tavallod"/>
+            </div>
+            <div class="valid-feedback"> </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button type="submit" id="sabt">ثبت</button>
+    </div>
+</div>
+

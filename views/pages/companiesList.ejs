@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- require duplicate head tag -->
+    <%- include ("../partial/headTag.ejs") -%> 
+    <!-- require local css -->
+    <link rel="stylesheet" href="../../CSS/companiesList.css">
+    <title>Companies</title>
+</head>
+
+<body>
+
+    <% if (error) { %>
+        <%- include ("../partial/body-navareElan.ejs", {title: "خطا"}) -%> 
+        <%- include ("../partial/body-errorMsg.ejs", {errorTxt: error}) -%> 
+    <% } else if (nothing) { %>
+        <%- include ("../partial/body-creatorPanel.ejs") -%>
+        <%- include ("../partial/body-navareElan.ejs", {title: nothing}) -%>
+        <%- include ("../partial/body-creatorButton.ejs", {buttonTxt: "ثبت کمپانی جدید"}) -%>
+    <% } else if (findResult) { %>
+        <%- include ("../partial/body-creatorPanel.ejs") -%>
+        <%- include ("../partial/body-navareElan.ejs", {title: "لیست تمام کمپانی های موجود"}) -%>
+        <%- include ("../partial/body-filterPanel.ejs") -%>
+        <%- include ("../partial/body-table.ejs", {companies: findResult}) -%>
+        <%- include ("../partial/body-creatorButton.ejs", {buttonTxt: "ثبت کمپانی جدید"}) -%>
+    <% } %>  
+
+    <!-- require duplicate scripts -->
+    <%- include ("../partial/body-scripts.ejs") -%> 
+    <!-- require local js -->
+    <script src="../../JS/companiesList.js"></script>
+</body>
+
+</html>

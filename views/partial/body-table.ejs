@@ -1,0 +1,38 @@
+<div id="myTable">
+    <table class="table table-striped table-dark">
+        <tr>
+            <th scope="col">ردیف</th>
+            <th scope="col">نام کمپانی</th>
+            <th scope="col">شماره ثبت</th>
+            <th scope="col">کشور</th>
+            <th scope="col">شهر</th>
+            <th scope="col">شماره تماس</th>
+            <th scope="col">تاریخ ثبت</th>
+            <th scope="col">ابزار</th>
+        </tr>
+        <% for( let i = 0; i < companies.length; i++ ) { %>
+            <tr>
+                <th scope="col"> <%= (i+1) %>  </th>
+                <td> <%= companies[i].name %>  </td>
+                <td> <%= companies[i].shomareSabt %>  </td>
+                <td> <%= companies[i].country %>  </td>
+                <td> <%= companies[i].city %>  </td>
+                <td> <%= companies[i].phoneNumber %>  </td>
+                <td>
+                    <%= companies[i].created_at %>  
+                </td>
+                <td id="icons">
+                    <span title="ویرایش">
+                        <i class="fas fa-pen hvr edit" id= <%= companies[i]._id %> ></i>
+                    </span>
+                    <span title="حذف">
+                        <i class="fas fa-trash-alt hvr delete" id= <%= companies[i]._id %>></i>
+                    </span>
+                    <span title="لیست کارمندان">
+                        <i class="far fa-list-alt hvr read" id= <%= companies[i]._id %>></i>
+                    </span>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</div>

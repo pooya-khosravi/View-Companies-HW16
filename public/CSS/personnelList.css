@@ -1,0 +1,414 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .lg-1 {width: 8.33%;}
+    .lg-2 {width: 16.66%;}
+    .lg-3 {width: 25%;}
+    .lg-4 {width: 33.33%;}
+    .lg-5 {width: 41.66%;}
+    .lg-6 {width: 50%;}
+    .lg-7 {width: 58.33%;}
+    .lg-8 {width: 66.66%;}
+    .lg-9 {width: 75%;}
+    .lg-10 {width: 83.33% !important;}
+    .lg-11 {width: 91.66%;}
+    .lg-12 {width: 100%;}
+}
+
+@media only screen and (max-width: 900px) {
+
+    #plotId{
+        width: 300px !important;
+    }
+
+    .md-1 {width: 8.33%;}
+    .md-2 {width: 16.66%;}
+    .md-3 {width: 25%;}
+    .md-4 {width: 33.33%;}
+    .md-5 {width: 41.66% !important;}
+    .md-6 {width: 50% !important;}
+    .md-7 {width: 58.33% !important;}
+    .md-8 {width: 66.66%;}
+    .md-9 {width: 75%;}
+    .md-10 {width: 83.33%;}
+    .md-11 {width: 91.66%;}
+    .md-12 {width: 100% !important;}
+}
+
+@media only screen and (max-width: 600px) {
+
+    .info-parent .showInfo{
+        margin: 0px !important;
+    }
+
+
+    .sm-1 {width: 8.33%;}
+    .sm-2 {width: 16.66%;}
+    .sm-3 {width: 25%;}
+    .sm-4 {width: 33.33%;}
+    .sm-5 {width: 41.66% !important;}
+    .sm-6 {width: 50%;}
+    .sm-7 {width: 58.33% !important;}
+    .sm-8 {width: 66.66%;}
+    .sm-9 {width: 75%;}
+    .sm-10 {width: 83.33%;}
+    .sm-11 {width: 91.66%;}
+    .sm-12 {width: 100%;}
+}
+
+@font-face{
+    font-family: vazirFont;
+    src: url(../Vazir-FD.woff2);
+}
+
+body{
+    position: relative;
+    background-color: azure;
+}
+
+.navareElan{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    font-family: vazirFont;
+    margin-bottom: 20px;
+}
+
+.navareElan .info-parent{
+    width: 70%;
+    height: auto;
+    direction: rtl;
+    display: flex;
+}
+
+.info-parent .showInfo{
+    width: 800px;
+    height: auto;
+    border: solid 1px black;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.showInfo span{
+    text-align: center;
+}
+
+.navareElan .moment-parent{
+    width: 30%;
+    height: auto;
+}
+
+.child-date, .child-clock{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    direction: rtl;
+}
+
+.child-date .dateText, .child-clock .clockText{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.child-date .showDate, .child-clock .showClock{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.button-creator{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: vazirFont;
+}
+
+.button-creator button{
+    width: 180px;
+    height: 50px;
+    border-radius: 5pc;
+    background-color: rgb(22, 190, 22);
+    color: white;
+    outline: none;
+}
+
+/* style for creator page */
+.createParent{
+    width: 600px;
+    height: 450px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: rgb(83, 83, 83, 0.8);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    direction: rtl;
+    overflow: hidden;
+    font-family: vazirFont;
+}
+
+.createParent .onvan{
+    height: 10%;
+    background-color: royalblue;
+    color: white;
+    border-bottom: solid 1px black;
+    display: flex;
+}
+
+.createParent .labels{
+    height: 75%;
+    overflow: auto;
+    padding: 10px;
+}
+
+.labels .fields{
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.fields .btn-secondary {
+    direction: ltr;
+    color: black;
+    background-color: white;
+    text-align: right;
+    border: none;
+    width: 90%;
+}
+
+.fields .dropdown-menu {
+    width: 80%;
+    text-align: right;
+    direction: rtl;
+    overflow: auto;
+    height: 200px;
+}
+
+.dropdown-menu p{
+    margin: 5px 15px 0px 5px;
+}
+
+.dropdown-menu p:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+
+.createParent .buttons{
+    height: 15%;
+    border-top: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.buttons button{
+    width: 150px;
+    height: 40px;
+    background-color: green;
+    border-radius: 5pc;
+    margin-right: 30px;
+    outline: none;
+    color: white;
+}
+
+#closeIcon{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.hvr:hover{
+    cursor: pointer;
+}
+
+#dialogMsg{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flag{
+    width: 10%;
+    height: 100%;
+}
+
+#flag img{
+    height: 100%;
+    width: 100%;
+}
+
+#telParent{
+    direction: ltr;
+    display: flex;
+}
+
+#telParent #countryCode{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+
+#tel{
+    text-align: right;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.fields .feedback{
+    width: 300px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+/* change date picker */
+.datepicker-plot-area {
+    width: 500px !important;
+}
+
+#tavallodParent, #sabtParent{
+    display: flex;
+}
+
+#sabtParent #taghvimIcon, #tavallodParent #taghvimIcon{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#tarikhSabt, #tavallod{
+    width: 500px;
+    height: 35px;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+/* style for radio buttons */
+.createParent .rButtons{
+    width: 450px;
+    margin-right: 50px;
+}
+
+/* filter style */
+.filter-panel{
+    width: 100;
+    height: auto;
+    border-radius: 5px;
+    direction: rtl;
+    margin: 5px 15px 5px 15px;
+    border: solid 1px black;
+    font-family: vazirFont;
+}
+
+.filter-panel h4{
+    text-align: right;
+    margin-right: 50px;
+}
+
+.filter-panel .filter-child{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-panel .dateField{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.dateField span{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateField span i{
+    font-size: 25px;
+}
+
+.dateField input{
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px gray;
+}
+
+.dateField input:hover{
+    cursor: pointer;
+}
+
+/* style table */
+#myTable{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#myTable .table{
+    margin: 15px;
+    text-align: center;
+    direction: rtl;
+    font-family: vazirFont;
+}
+
+#myTable .table span{
+    width: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myTable #icons{
+    display: flex;
+    justify-content: space-around;
+}
+
+#myTable .submit-edit{
+    color: green;
+}
+
+#myTable .cancel-edit{
+    color: red;
+}
+
+#myTable input{
+    width: 150px;
+}

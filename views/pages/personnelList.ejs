@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- require duplicate head tag -->
+    <%- include ("../partial/headTag.ejs") -%> 
+    <!-- require local css -->
+    <link rel="stylesheet" href="../../CSS/personnelList.css">
+    <title>Companies</title>
+</head>
+
+<body>
+
+    <div>
+        <h2 id="myID" style="font-family: vazirFont; direction: rtl; text-align: center;"><%= ID %></h2>
+    </div>
+
+    <% if (error) { %>
+        <%- include ("../partial/body-navareElan.ejs", {title: "خطا"}) -%> 
+        <%- include ("../partial/body-errorMsg.ejs", {errorTxt: error}) -%> 
+    <% } else if (nothing) { %>
+        <%- include ("../partial/body-creatorPanel.ejs") -%>
+        <%- include ("../partial/body-navareElan.ejs", {title: nothing}) -%>
+        <%- include ("../partial/body-creatorButton.ejs", {buttonTxt: "ثبت کارمند جدید"}) -%>
+    <% } else if (findResult) { %>
+        <%- include ("../partial/body-creatorPanel.ejs") -%>
+        <%- include ("../partial/body-navareElan.ejs", {title: `کارمندان شرکت ${findResult[0].company.name}` }) -%>
+        <%- include ("../partial/body-personnelTable.ejs", {personnel: findResult}) -%>
+        <%- include ("../partial/body-creatorButton.ejs", {buttonTxt: "ثبت کارمند جدید"}) -%>
+    <% } %>  
+
+    <!-- require duplicate scripts -->
+    <%- include ("../partial/body-scripts.ejs") -%> 
+    <!-- require local js -->
+    <script src="../../JS/personnelList.js"></script>
+</body>
+
+</html>
